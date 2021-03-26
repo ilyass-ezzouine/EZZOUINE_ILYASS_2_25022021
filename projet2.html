@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="P2.css" />
     <title>Reservia</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,13 +25,22 @@
         </div>
 
         <div class="Recherche">     
-            <i class="fas fa-map-marker-alt"></i>     
-            <form method="Recherche" action="#">
+            <i class="fas fa-search-location"></i>      
+            <form  method="Recherche" action="#">
                <p>
-                <input type="search" name="Recherche" id="Recherche" placeholder="Strasbourg, France"/>
+                <input class="searchbar" type="search" name="Recherche" id="Recherche" placeholder="Strasbourg, France"/>
                 </p> 
             </form>
             <input class="button" type="submit" value="Rechercher" />
+        </div>
+
+        <div class= "filterbar">
+            <div class="filter"> Filtres </div>
+            <div class="filter" > Economique </div>
+            <div class="filter" > Familial </div>
+            <div class="filter" > Romantique </div>
+            <div class="filter" > Animaux autorisés</div>
+
         </div>
     </div>
 
