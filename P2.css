@@ -13,6 +13,7 @@ header
     justify-content:space-between;
     flex-wrap: wrap;
     display: flex;
+    max-width: 1390px;
 }
 
 .onglet 
@@ -69,11 +70,13 @@ p:nth-child(1)
 {
 
     display: flex;
-    font-size: 14px;
+    height: 32px;
+    margin-bottom: 30px;
+    padding-left: 20px;
 }
 .searchbar{
     font-weight:bold;
-    font-size: 14px;
+    font-size: 100%;
     border-color:#F2F2F2;
     border-style: solid;
 }
@@ -84,8 +87,20 @@ p:nth-child(1)
     border: none;
     text-align: center;
     text-decoration: none;
-    font-size: 14px;
-    border-radius: 4px;
+    font-size: 100%;
+    border-bottom-right-radius:10px ;
+    border-top-right-radius:10px;
+}
+.icon{
+    display:flex;
+    font-size: 100%;
+    background-color: #F2F2F2;
+    border-bottom-left-radius:15px ;
+    border-top-left-radius:15px;
+    width:50px;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .filterbar{
@@ -94,12 +109,17 @@ p:nth-child(1)
 }
 
 .filter{
-    padding: 20px;
+    font-weight:bold ;
+    padding: 10px;
     border-style: solid;
     border-radius: 50px;
     border-color:#F2F2F2;
 }
 
+.filter:nth-child(1){
+    border-style: none;
+    width: 100%;
+}
 .bottomcontainer 
 {
     display: flex;
@@ -112,15 +132,22 @@ footer
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    max-width: 1390px;
+    margin-right: 20px;
 }
 
 .footercol
 {
-    margin-left: 20px;
+    padding-left: 20px;
     font-size: 14px;
+    
+    
 }
-
-
+.footertext
+{
+    text-decoration: none;
+    color: black;
+}
 
 @media all and (min-width: 768px){
 
@@ -140,7 +167,7 @@ footer
     {
         padding-top: 0px;
         padding-left: 20px;
-        width:50;
+        width:50%;
     }
     
     .onglet:nth-child(2)
@@ -162,15 +189,26 @@ footer
         margin-top: 0px;
         width:auto;
     }
+
+
+    .filter:nth-child(1){
+        width: auto;
+    }
     
     footer
     {
         display: flex;
         align-items:flex-start;
         flex-direction: row;
-        justify-content: space-around; 
+        justify-content: space-between; 
         width:100%;
     }
 
+    .footercol{
+        width:33%;
+    }
+    .footercol:nth-child(1){
+        margin-left: 20px; 
+    }
 
 }
