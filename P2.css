@@ -10,6 +10,8 @@ body{
 .topcontainer{
         
         max-width: 1390px;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 header
@@ -115,19 +117,30 @@ p:nth-child(1)
 .filter{
     font-weight:bold ;
     background-color: white;
-    padding: 10px;
-    padding-left: 0px;
     margin: 5px;
-    border-style: solid;
+    padding: 0px;
     border-radius: 50px;
-    border-color:#F2F2F2;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    border: 2px solid #F2F2F2;
     border-left: none;
+    overflow: hidden;
 }
 
+.filtertext{
+    width: 100%;
+}
+ 
 .filtericon{
     
-        background-color: aqua;
-        border-radius: 50px;
+        background-color: #DEEBFF;
+        border-radius: 0 50px 50px 0;
+        height:100%;
+        width: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
 .filter .fas {
@@ -136,9 +149,11 @@ p:nth-child(1)
 
 }
 
+.filtertitle{
+    padding: 0 10px; 
+}
 
 .filter:hover{
-
     background-color:#0065FC;
     color: white;
 }
@@ -225,6 +240,10 @@ footer
         width: auto;
     }
     
+    .filtertext{
+        width: auto;
+    }
+
     .bottomcontainer 
 {
 
