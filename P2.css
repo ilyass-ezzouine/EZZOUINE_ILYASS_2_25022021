@@ -190,7 +190,7 @@ section {
   background-color: #f2f2f2;
   flex-direction: column;
 }
-.hebergements_populaires .articlesection {
+.hebergements_populaires .articlesection a {
   display: flex;
   background-color: white;
   border: 5px solid white;
@@ -198,9 +198,10 @@ section {
   margin: 10px;
 }
 
-.hebergements_populaires .sectionTitle {
+.sectionTitle {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .textsection {
@@ -222,9 +223,11 @@ section {
 } 
 
 .infohebergement {
+
   display: flex;
   flex-direction: column;
   width: 50%;
+  padding-left:6px ;
 }
 
 .infohebergement .fas {
@@ -246,7 +249,7 @@ section {
   flex-direction: column;
 }
 
-.hebergements .articlesection {
+.hebergements .articlesection a {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -265,6 +268,10 @@ section {
 .hebergements .articlesection .picturesection .photohebergement{
   border-radius: 20px 20px 0 0;
 } 
+.hebergements .articlesection .infohebergement{
+  width:100%;
+  height: 50%;
+}
 
 .hebergements .articlesection .infohebergement p {
   margin: 2px;
@@ -284,6 +291,37 @@ section {
 }
 
 .activites {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.activites .articlesection a{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 5px solid white;
+  box-shadow: 0px 5px 15px #bcbfc2;
+  border-radius: 20px;
+  margin: 10px;
+
+}
+
+.activites .articlesection .picturesection{
+  width:100%;
+  height: 50%;
+}
+
+.activites .articlesection .picturesection .photohebergement{
+  border-radius: 20px 20px 0 0;
+} 
+.activites .articlesection .infohebergement{
+  width:100%;
+  
+}
+.activites .articlesection .infohebergement p {
+  margin:2 ;
 }
 
 .bottomcontainer {
@@ -376,5 +414,45 @@ footer {
   }
   .footercol:nth-child(1) {
     margin-left: 20px;
+  }
+  section {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .hebergements_populaires {
+    order:2;
+    display: flex;
+    width: 30%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    flex-direction: column;
+  }
+  .hebergements {
+    order:1;
+    display: flex;
+    width: 70%;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .hebergements .articlesection {
+    width:30%;
+  }
+  .hebergements .articlesection a {
+    display: flex;
+    background-color: white;
+    border: 5px solid white;
+    box-shadow: 0px 5px 15px #bcbfc2;
+    border-radius: 20px;
+    margin 10px;
+  }
+
+  .activites{
+  order:3;
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  flex-direction: column;
   }
 }
