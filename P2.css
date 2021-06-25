@@ -81,8 +81,8 @@ p:nth-child(1) {
   text-align: center;
   text-decoration: none;
   font-size: 100%;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
+  width: 40px;
 }
 .icon {
   display: flex;
@@ -90,15 +90,17 @@ p:nth-child(1) {
   background-color: #f2f2f2;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-  width: 50px;
+  width: 40px;
   align-items: center;
   justify-content: center;
+  margin-left: -10px;
 }
 
 .filterbar {
   flex-wrap: wrap;
   display: flex;
   align-items: center;
+  padding-left:20px;
 }
 
 .filter {
@@ -153,8 +155,10 @@ p:nth-child(1) {
 }
 
 .textinfo {
-  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   display: flex;
+  padding-left: 20px;
 }
 
 .infoicon .fas {
@@ -176,7 +180,6 @@ p:nth-child(1) {
 }
 
 section {
-  justify-self: center;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -195,17 +198,25 @@ section {
   background-color: white;
   border: 5px solid white;
   border-radius: 20px;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .sectionTitle {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   width: 100%;
+  padding: 0 15px 0 15px;
 }
 
 .textsection {
   font-weight: bold;
+}
+
+.iconsection{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hebergements_populaires .articlesection .picturesection{
@@ -227,9 +238,18 @@ section {
   display: flex;
   flex-direction: column;
   width: 50%;
-  padding-left:6px ;
+  padding: 15px 0px 15px 15px
 }
+.infohebergement p{
+ margin: 5px 0 5px 0;
 
+}
+.infohebergement p:nth-child(1){
+  font-size: 16px;
+ }
+ .infohebergement p:nth-child(2){
+  font-size: 14px;
+ }
 .infohebergement .fas {
   color: #0065fc;
 }
@@ -321,7 +341,7 @@ section {
   
 }
 .activites .articlesection .infohebergement p {
-  margin:2 ;
+  margin:2px ;
 }
 
 .bottomcontainer {
@@ -392,7 +412,10 @@ footer {
   .textrecherche {
     display: initial;
   }
-
+  .button{
+  border-radius: 0 10px 10px 0;
+  width: 110px;
+  }
   .button .fas {
     display: none;
   }
@@ -416,28 +439,47 @@ footer {
     margin-left: 20px;
   }
   section {
-    display: flex;
-    width: 100%;
+    margin-top: 15px;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
   }
   .hebergements_populaires {
     order:2;
     display: flex;
-    width: 30%;
+    width: 29%;
     padding: 10px;
     background-color: #f2f2f2;
     flex-direction: column;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hebergements_populaires .articlesection{
+    width: 90%;
+  }
+  .hebergements_populaires .articlesection .picturesection{
+    width:35%;
+  }
+  .hebergements_populaires .articlesection .infohebergement{
+    width:65%;
   }
   .hebergements {
     order:1;
     display: flex;
-    width: 70%;
+    width: 69%;
     padding: 10px;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    justify-content: space-between;
+    align-items: stretch;
   }
   .hebergements .articlesection {
-    width:30%;
+    width:33%;
+    padding:15px;
   }
   .hebergements .articlesection a {
     display: flex;
@@ -445,14 +487,42 @@ footer {
     border: 5px solid white;
     box-shadow: 0px 5px 15px #bcbfc2;
     border-radius: 20px;
-    margin 10px;
+    margin: 0;
+    height: 100%;
   }
-
+  .linkafficherplus{
+    padding:15px 15px 15px 15px;
+  }
   .activites{
   order:3;
-  display: flex;
-  width: 100%;
-  padding: 10px;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
   }
+
+  .activites .articlesection .picturesection a{
+    height:100%
+  }
+  .activites .articlesection .picturesection{
+    height: 70%;
+  }
+
+
+  .activites .articlesection .infohebergement{
+    height:30%;
+  }
+
+  .activites .articlesection{
+    width:23%;
+  }
+
+.doublearticle{
+  display: flex;
+  flex-direction: column;
+  width:23%;
+  }
+  .doublearticle .articlesection{
+    width:100%
+    }
 }
