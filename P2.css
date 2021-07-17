@@ -20,8 +20,10 @@ header {
   display: flex;
 }
 
-.onglet {
+.onglet a{
   font-size: 20px;
+  text-decoration: none;
+  color: black;
 }
 
 .onglet:nth-child(1) {
@@ -42,10 +44,13 @@ header {
   width: 50%;
 }
 
-.onglet:nth-child(4) {
+.onglet:nth-child(4) a{
   color: #0065fc;
-  order: 2;
   font-weight: bold;
+}
+
+.onglet:nth-child(4) {
+  order: 2;
   margin-top: 14px;
   padding-right: 20px;
   width: 50%;
@@ -174,12 +179,16 @@ p:nth-child(1) {
 }
 
 .sectioncontainer {
+  max-width: 1390px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: flex-start;
   margin-bottom: 5px;
 }
 
 section {
+
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -195,8 +204,8 @@ section {
 }
 .hebergements_populaires .articlesection a {
   display: flex;
-  background-color: white;
-  border: 5px solid white;
+  background: white;
+  padding: 5px;
   border-radius: 20px;
   margin-top: 10px;
 }
@@ -273,7 +282,7 @@ section {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border: 5px solid white;
+  padding:5px;
   box-shadow: 0px 5px 15px #bcbfc2;
   border-radius: 20px;
   margin: 10px;
@@ -282,15 +291,13 @@ section {
 
 .hebergements .articlesection .picturesection{
   width:100%;
-  height: 50%;
-}
+  }
 
 .hebergements .articlesection .picturesection .photohebergement{
   border-radius: 20px 20px 0 0;
 } 
 .hebergements .articlesection .infohebergement{
   width:100%;
-  height: 50%;
 }
 
 .hebergements .articlesection .infohebergement p {
@@ -321,7 +328,7 @@ section {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border: 5px solid white;
+  padding: 5px;
   box-shadow: 0px 5px 15px #bcbfc2;
   border-radius: 20px;
   margin: 10px;
@@ -331,6 +338,7 @@ section {
 .activites .articlesection .picturesection{
   width:100%;
   height: 50%;
+  overflow: hidden;
 }
 
 .activites .articlesection .picturesection .photohebergement{
@@ -373,42 +381,34 @@ footer {
     display: flex;
     flex-wrap: nowrap;
   }
-
   .onglet {
     padding-top: 18px;
   }
-
   .onglet:nth-child(1) {
     padding-top: 0px;
     padding-left: 20px;
     width: 50%;
   }
-
   .onglet:nth-child(2) {
     margin-left: 0px;
     order: 2;
     width: auto;
   }
-
   .onglet:nth-child(3) {
     width: auto;
     order: 3;
   }
-
   .onglet:nth-child(4) {
     order: 4;
     margin-top: 0px;
     width: auto;
   }
-
   .filter:nth-child(1) {
     width: auto;
   }
-
   .filtertext {
     width: auto;
   }
-
   .textrecherche {
     display: initial;
   }
@@ -419,11 +419,9 @@ footer {
   .button .fas {
     display: none;
   }
-
   .bottomcontainer {
     justify-content: center;
   }
-
   footer {
     display: flex;
     align-items: flex-start;
@@ -431,7 +429,6 @@ footer {
     justify-content: space-between;
     width: 100%;
   }
-
   .footercol {
     width: 33%;
   }
@@ -483,8 +480,8 @@ footer {
   }
   .hebergements .articlesection a {
     display: flex;
-    background-color: white;
-    border: 5px solid white;
+    background: white;
+    padding: 5px;
     box-shadow: 0px 5px 15px #bcbfc2;
     border-radius: 20px;
     margin: 0;
@@ -500,29 +497,37 @@ footer {
   justify-content: space-between;
   align-items: stretch;
   }
-
-  .activites .articlesection .picturesection a{
-    height:100%
+  .activites .articlesection a{
+    height:100%;
   }
   .activites .articlesection .picturesection{
-    height: 70%;
+    height: auto;
+    flex-grow: 1;
   }
-
-
+  .activites .articlesection .picturesection .photohebergement{
+    height: 100%;
+  }
+  .activites .articlesection {
+    height: 100%;
+  }
   .activites .articlesection .infohebergement{
-    height:30%;
+    height:auto;
   }
-
-  .activites .articlesection{
-    width:23%;
-  }
-
-.doublearticle{
+ .column{
   display: flex;
   flex-direction: column;
   width:23%;
   }
-  .doublearticle .articlesection{
-    width:100%
+  .column-2 .articlesection:nth-child(1) .picturesection {
+      max-height: 150px;
+  }
+  .column-2 .articlesection:nth-child(1), .column-4 .articlesection:nth-child(1)  {
+    margin-bottom: 10px;
+}
+  .column-2 .articlesection:nth-child(2) .picturesection {
+    max-height:100px;
+  }
+.column-4 .picturesection {
+    max-height:125px;
     }
 }
